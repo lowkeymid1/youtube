@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const embedLinkInput = document.getElementById('embed-link');
     const nocookieLinkInput = document.getElementById('nocookie-link');
     const errorMessage = document.getElementById('error-message');
+    const helpToggle = document.getElementById('help-toggle');
+    const helpBox = document.getElementById('help');
+    const secret = document.getElementById('secret');
+    const essay = document.getElementById('essay');
 
     // Function to extract YouTube video ID
     function extractVideoID(url) {
@@ -38,12 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
             nocookieLinkInput.value = nocookieURL;
 
             results.classList.remove('hidden');
+            results.classList.add('fade-in');
             errorMessage.classList.add('hidden');
         } else {
             results.classList.add('hidden');
             errorMessage.classList.remove('hidden');
         }
     });
+
+    // Toggle help box
+    if (helpToggle && helpBox) {
+        helpToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            helpBox.classList.toggle('hidden');
+            helpBox.classList.toggle('fade-in');
+        });
+    }
+
+    // Toggle secret essay
+    if (secret && essay) {
+        secret.addEventListener('click', () => {
+            essay.classList.toggle('hidden');
+            essay.classList.toggle('fade-in');
+        });
+    }
 
     // Add event listeners to all copy buttons
     document.querySelectorAll('.copy-btn').forEach(button => {
