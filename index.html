@@ -11,10 +11,21 @@
 <body>
     <div class="container">
         <h1>YouTube Link Converter</h1>
+
+        <a href="#" id="help-toggle" class="help-toggle">Need help?</a>
+        <div id="help" class="help-box hidden">
+            <p>
+                Paste a YouTube link in the box below and click <strong>Convert</strong>
+                to generate embed links. Use the <em>Copy</em> buttons to quickly copy
+                each link. It's a simple way for teachers to share videos without ads.
+            </p>
+        </div>
+
         <form id="converter-form">
             <input type="text" id="youtube-link" placeholder="Enter YouTube URL" required>
             <button type="submit">Convert</button>
         </form>
+
         <div id="results" class="hidden">
             <div class="result-item">
                 <label for="embed-link">Embed Link:</label>
@@ -29,6 +40,37 @@
         </div>
         <div id="error-message" class="error hidden">
             Please enter a valid YouTube URL.
+        </div>
+
+        <div id="secret" class="secret">&#x1F4A1;</div>
+        <div id="essay" class="essay hidden">
+            <h2>Why Homework Can Be Harmful</h2>
+            <p>
+                Homework is often seen as a necessary part of learning, yet research
+                suggests that excessive assignments can diminish students'
+                enthusiasm for education. When children spend hours on homework
+                after a full day of school, they have little time left for play,
+                exploration and much-needed rest.
+            </p>
+            <p>
+                Studies show that too much homework can lead to stress and burnout.
+                Instead of deepening understanding, students may end up completing
+                tasks simply to get them done. Over time, this can foster negative
+                feelings toward learning and reduce creativity.
+            </p>
+            <p>
+                Furthermore, lengthy assignments can widen the achievement gap,
+                disproportionately affecting students who lack a quiet place or
+                support at home. Teachers can encourage balance by focusing on
+                meaningful, concise tasks that reinforce classroom lessons without
+                overwhelming learners.
+            </p>
+            <p>
+                By rethinking the role of homework, we can promote well-being and
+                ignite students' natural curiosity. When they have time to pursue
+                hobbies, interact with family and recharge, kids come to class
+                ready to engage and grow.
+            </p>
         </div>
     </div>
     <!-- Link to external JavaScript -->
